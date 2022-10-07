@@ -1,0 +1,30 @@
+function setup() {
+  createCanvas(600, 600);
+}
+
+function draw() {
+  //background
+  background(300);
+  
+  //black rectangle
+  fill(50);
+  rect (0,0,600,140);
+  
+  //white rectangle
+  fill(300);
+  rect (0,140,600,180)
+  
+  //gold rectangles
+  fill (255, 204, 0)
+  rect(50, 175, 225, 100, 20);
+  
+  fill (255, 204, 0)
+  rect(325, 175, 225, 100, 20);
+  
+  //bottom gold rectangle
+  fill(255, 204, 0);
+  rect (0,320,600,240);
+  
+  //links rectangle
+   fill(300);
+  rect (0,560,600,40)
