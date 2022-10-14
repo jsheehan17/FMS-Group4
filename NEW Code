@@ -28,4 +28,24 @@ function draw() {
   //links rectangle
   fill(300);
   rect (0,650,1540,50)
+  
+  //text Fine Motor Skills
+  textSize(100);
+  stroke (0)
+  text ("Fine Motor Skills", 400, 120);
+  
+  //text What is FMS
+  textSize(20)
+  stroke(300)
+  fill(0)
+  text("What Are Fine Motor Skills:  Fine Motor Skills (FMS) are basic hand eye coordination movements that are necessary in all individuals. These movements are very important", 15, 390)
+  text("in laying the foundation for toddlers and young children. These are not the only individuals that would benefit from practicing their FMS, stroke victims practice FMS skills to", 15, 420)
+  text("rehab and regain their normal movements.", 15, 450)
+  
+  //text Our Goal
+  textSize(20)
+  stroke(300)
+  fill(0)
+  text("Our Goal: Our goal is to design and implement an easy to use program for individuals of all skill levels. We want to help young kids and recovering adults to improve their", 15, 540)
+   text("Fine Motor Skills and create a strong foundation for the rest of their lives. We also want to do this completely digitally in order to create a more convenient program.", 15, 570)
 }
