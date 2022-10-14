@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(1520, 700);
+  createCanvas(1540, 700);
 }
 
 function draw() {
@@ -8,11 +8,11 @@ function draw() {
 
   //black rectangle
   fill(50);
-  rect (0,0,1520,170);
+  rect (0,0,1540,170);
 
   //white rectangle
   fill(300);
-  rect (0,170,1520,180)
+  rect (0,170,1540,180)
 
   //gold rectangles
   fill (255, 204, 0)
@@ -23,9 +23,9 @@ function draw() {
 
   //bottom gold rectangle
   fill(255, 204, 0);
-  rect (0,350,1520,300);
+  rect (0,350,1540,300);
 
   //links rectangle
   fill(300);
-  rect (0,650,1520,50)
+  rect (0,650,1540,50)
 }
