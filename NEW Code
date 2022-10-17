@@ -14,15 +14,8 @@ function draw() {
   fill(300);
   rect (0,170,1540,180)
 
-  //gold rectangles
-  fill (255, 204, 0)
-  rect(360, 210, 300, 100, 20);
-
-  fill (255, 204, 0)
-  rect(860, 210, 300, 100, 20);
-
   //bottom gold rectangle
-  fill(255, 204, 0);
+  fill('gold');
   rect (0,350,1540,300);
 
   //links rectangle
@@ -60,4 +53,20 @@ function draw() {
   stroke(300)
   fill(0)
   text ("Stroke Victims",910 , 270)
+  
+  //Children Button 
+  children_button = createButton ("Children / Toddlers")
+  children_button.position (210, 210)
+  children_button.size (450,100)
+  children_button.style ('color:black')
+  children_button.style ('background-color: gold')
+  children_button.style ('font-size','36px')
+  
+  //Stroke Victims Button 
+  stroke_button = createButton ("Stroke Victims")
+  stroke_button.position (860, 210)
+  stroke_button.size (450,100)
+  stroke_button.style ('color:black')
+  stroke_button.style ('background-color: gold')
+  stroke_button.style ('font-size','36px')
 }
