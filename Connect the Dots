@@ -10,26 +10,68 @@ function draw() {
   fill('#222222');
   circle(500,200,15);
   
-  fill('#222222');
-  circle(1400,378,15);
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('3', 495, 205);
   
   fill('#222222');
-  circle(1168,621,15);
+circle(1400,378,15);
+  
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('8', 1395, 383);
   
   fill('#222222');
-  circle(1032,553,15);
+ circle(1168,621,15);
+  
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('7', 1163, 626);
+  
+  fill('#222222');
+ circle(1032,553,15);
+  
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('6', 1027, 558);
   
   fill('#222222');
   circle(797, 132,15);
   
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('5', 792, 137);
+  
   fill('#222222');
   circle(145,486,15);
+  
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('1', 140, 491);
+  
+
   
   fill('#222222');
   circle(700,350,15);
   
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('4', 695, 355);
+  
   fill('#222222');
   circle(375,585,15);
+  
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('2', 370, 590);
   
   
   
