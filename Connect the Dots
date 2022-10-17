@@ -1,0 +1,39 @@
+function setup() {
+  createCanvas(1540, 700);
+}
+
+function draw() {
+  //background
+  background(300);
+
+
+  fill('#222222');
+  circle(500,200,15);
+  
+  fill('#222222');
+  circle(1400,378,15);
+  
+  fill('#222222');
+  circle(1168,621,15);
+  
+  fill('#222222');
+  circle(1032,553,15);
+  
+  fill('#222222');
+  circle(797, 132,15);
+  
+  fill('#222222');
+  circle(145,486,15);
+  
+  fill('#222222');
+  circle(700,350,15);
+  
+  fill('#222222');
+  circle(375,585,15);
+  
+  
+  
+  
+  
+
+}
