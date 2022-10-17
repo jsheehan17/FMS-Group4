@@ -31,9 +31,9 @@ function draw() {
   textSize(20)
   stroke(300)
   fill(0)
-  text("What Are Fine Motor Skills:  Fine Motor Skills (FMS) are basic hand eye coordination movements that are necessary in all individuals. These movements are very important", 15, 390)
-  text("in laying the foundation for toddlers and young children. These are not the only individuals that would benefit from practicing their FMS, stroke victims practice FMS skills to", 15, 420)
-  text("rehab and regain their normal movements.", 15, 450)
+  text("What Are Fine Motor Skills:  Fine Motor Skills (FMS) are basic hand eye coordination movements that are important in all individuals. These movements are very", 15, 390)
+  text("important in laying the foundation for toddlers and young children. These are not the only individuals that would benefit from practicing their FMS, stroke victims practice", 15, 420)
+  text("FMS skills to rehab and regain their normal movements.", 15, 450)
   
   //text Our Goal
   textSize(20)
@@ -61,6 +61,7 @@ function draw() {
   children_button.style ('color:black')
   children_button.style ('background-color: gold')
   children_button.style ('font-size','36px')
+  children_button.mouseOver(colorChange)
   
   //Stroke Victims Button 
   stroke_button = createButton ("Stroke Victims")
@@ -69,4 +70,19 @@ function draw() {
   stroke_button.style ('color:black')
   stroke_button.style ('background-color: gold')
   stroke_button.style ('font-size','36px')
+  stroke_button.mouseOver(changeColor)
+  
+  //children button color function
+  function colorChange() {
+    children_button.style(
+        "background-color: white"
+      )
+      }
+  
+  //stroke button color function
+  function changeColor() {
+    stroke_button.style(
+        "background-color: white"
+      )
+      }
 }
