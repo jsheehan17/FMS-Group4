@@ -48,4 +48,16 @@ function draw() {
   fill(0)
   text("Our Goal: Our goal is to design and implement an easy to use program for individuals of all skill levels. We want to help young kids and recovering adults to improve their", 15, 540)
    text("Fine Motor Skills and create a strong foundation for the rest of their lives. We also want to do this completely digitally in order to create a more convenient program.", 15, 570)
+  
+  //text Toddlers
+  textSize(30)
+  stroke(300)
+  fill(0)
+  text ("Children / Toddlers",380 , 270)
+  
+  //text Toddlers
+  textSize(30)
+  stroke(300)
+  fill(0)
+  text ("Stroke Victims",910 , 270)
 }
