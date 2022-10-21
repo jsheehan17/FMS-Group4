@@ -61,7 +61,6 @@ function draw() {
   children_button.style ('color:black')
   children_button.style ('background-color: gold')
   children_button.style ('font-size','36px')
-  children_button.mouseOver(colorChange)
   
   //Stroke Victims Button 
   stroke_button = createButton ("Stroke Victims")
@@ -70,19 +69,4 @@ function draw() {
   stroke_button.style ('color:black')
   stroke_button.style ('background-color: gold')
   stroke_button.style ('font-size','36px')
-  stroke_button.mouseOver(changeColor)
-  
-  //children button color function
-  function colorChange() {
-    children_button.style(
-        "background-color: white"
-      )
-      }
-  
-  //stroke button color function
-  function changeColor() {
-    stroke_button.style(
-        "background-color: white"
-      )
-      }
 }
