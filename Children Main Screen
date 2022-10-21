@@ -1,0 +1,49 @@
+function setup() {
+  createCanvas(1540, 700);
+}
+
+function draw() {
+  //background
+  background(300);
+
+  //black rectangle
+  fill(50);
+  rect (0,0,1540,170);
+
+  //bottom gold rectangle
+  fill('gold');
+  rect (0,170,1540,500);
+
+  //links rectangle
+  fill(300);
+  rect (0,650,1540,50)
+  
+  //text Children / Toddlers
+  textSize(100);
+  stroke (0)
+  text ("Children / Toddlers", 360, 120);
+  
+  //Connect The Dots Button 
+  dots_button = createButton ("Connect The Dots")
+  dots_button.position (380, 220)
+  dots_button.size (800,100)
+  dots_button.style ('color:black')
+  dots_button.style ('background-color: white')
+  dots_button.style ('font-size','36px')
+  
+  //Sorting Shapes Victims Button 
+  shape_button = createButton ("Sorting Shapes")
+  shape_button.position (380, 350)
+  shape_button.size (800,100)
+  shape_button.style ('color:black')
+  shape_button.style ('background-color: white')
+  shape_button.style ('font-size','36px')
+  
+  //Math Problems Button 
+  math_button = createButton ("Math Problems")
+  math_button.position (380, 480)
+  math_button.size (800,100)
+  math_button.style ('color:black')
+  math_button.style ('background-color: white')
+  math_button.style ('font-size','36px')
+}
