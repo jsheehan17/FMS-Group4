@@ -1,0 +1,26 @@
+function setup() {
+  createCanvas(1540, 700);
+}
+
+function draw() {
+  //background
+  background(300);
+  
+  //black rectangle
+  fill(50);
+  rect (0,0,1540,150);
+
+  //white rectangle
+  fill(300);
+  rect (0,150,1540,510)
+  
+  //gold rectangle links
+  fill('gold')
+  rect (0,660,1540,40)
+  
+   //text Fine Motor Skills
+  fill(300)
+  textSize(100);
+  stroke (0)
+  text ("Sorting Shapes", 440, 110);
+}
