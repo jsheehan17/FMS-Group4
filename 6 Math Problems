@@ -1,8 +1,21 @@
-var inputVal;
-var submitB; // submit button
+var answerBox;
+var submitB; 
+
 
 function setup() {
   createCanvas(1540, 700);
+  
+  // create submit button
+  submitB = createButton("submit");
+  submitB.position(720,550);
+  submitB.size(150,50);
+  submitB.style('color:black');
+  submitB.style('background-color:gold');
+  
+  // create text input (answer)
+  answerBox = createInput('');
+  answerBox.position(770,510);
+  answerBox.size(40,25);
 }
 
 function draw() {
