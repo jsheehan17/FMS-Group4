@@ -1,5 +1,14 @@
+let grabbed = false;
+let shapeX;
+let shapeY;
+const radius = 75;
+const diameter = radius*2;
+
 function setup() {
   createCanvas(1540, 700);
+  
+  shapeX = width/2;
+  shapeY = height/2;
 }
 
 function draw() {
@@ -23,4 +32,34 @@ function draw() {
   textSize(100);
   stroke (0)
   text ("Sorting Shapes", 440, 110);
+  
+  
+  fill ('rgb(209,204,204)')
+  square (250,450,150)
+  circle (770,520,150)
+  rect (1150,450,250,150)
+  
+   fill('blue')
+  ellipse(shapeX, shapeY, diameter, diameter)
+}
+
+function mousePressed () {
+  let d = dist(mouseX, mouseY, shapeX, shapeY)
+  if(d<radius) {
+    grabbed = true
+  }
+  else {
+    grabbed = false
+  }
+}
+
+function mouseReleased (){
+  grabbed = false;
+}
+
+function mouseDragged(){
+  if(grabbed){
+    shapeX = mouseX
+    shapeY = mouseY
+  }
 }
