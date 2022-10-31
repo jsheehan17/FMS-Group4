@@ -1,0 +1,84 @@
+let grabbed = [
+  false,
+  false,
+  false
+];
+
+let x = [];
+let y = [];
+
+let hiddenObjectSelected = false;
+
+function setup() {
+  createCanvas(1540, 700);
+  background(220);
+  
+  x[0] = 300;
+  y[0] = 150;
+  
+  x[1] = 600;
+  y[1] = 150;
+  
+  x[2] = 1075;
+  y[2] = 225;
+  
+}
+
+function draw() {
+  background(220);
+  
+  stroke (0);
+  strokeWeight (2);
+  fill ('gold');
+  
+  square(x[0], y[0], 150);
+  rect(x[1], y[1], 250,150);
+  circle(x[2], y[2], 150);
+  
+}
+
+function mouseIsInRect (x, y, width, height) {}
+
+function mouseIsInCircle (radius, circleX, circleY) {}
+
+function mouseIsInSquare (x, y, width, height) {}
+
+function mousePressed () {
+  
+  if(mouseIsInCircle(x[2], y[2], 150) ) {
+    grabbed[2] = true;
+  }
+  
+  if(mouseIsInRect(x[1], y[1], 250, 150) ) {
+    grabbed[1] = true;
+  }
+  
+  if(mouseIsInSquare(x[0], y[0], 150) ) {
+    grabbed[0] = true;
+  }
+  print (grabbed);
+}
+
+function mouseReleased() {
+  grabbed [2] = false;
+  grabbed [1] = false;
+  grabbed [0] = false;
+}
+
+function mouseDragged () {
+  
+  if (grabbed [2]) {
+    x[2] = mouseX;
+    y[2] = mouseY;
+  }
+  
+  else if (grabbed [1]) {
+    x[1] = mouseX;
+    y[1] = mouseY;
+  }
+  
+  else if (grabbed [0]) {
+    x[0] = mouseX;
+    y[0] = mouseY;
+  }
+}
