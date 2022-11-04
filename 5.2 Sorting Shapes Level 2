@@ -1,0 +1,75 @@
+let grabbed = false;
+let shapeX;
+let shapeY;
+const radius = 100;
+const diameter = radius*2;
+
+function setup() {
+  createCanvas(1540, 700);
+  
+  shapeX = width/2;
+  shapeY = height/2;
+}
+
+function draw() {
+  //background
+  background(300);
+  
+  //black rectangle
+  fill(50);
+  rect (0,0,1540,150);
+
+  //white rectangle
+  fill(300);
+  rect (0,150,1540,510)
+  
+  //gold rectangle links
+  fill('gold')
+  rect (0,660,1540,40)
+  
+   //text Fine Motor Skills
+  fill(300)
+  textSize(100);
+  stroke (0)
+  text ("Sorting Shapes", 440, 110);
+  
+  //Check Button 
+  check = createButton ("Check")
+  check.position (690, 575)
+  check.size (150,50)
+  check.style ('color:black')
+  check.style ('background-color: rgb(211,207,207)')
+  check.style ('font-size','20px')
+  
+  //Greyed Out Circles
+  fill ('rgb(209,204,204)')
+  circle (350,520,150)
+  circle (1200,275,175)
+  circle (1200,500,200)
+  circle (350,285,225)
+  
+  //Colored Circle 
+  fill('red')
+  ellipse(shapeX, shapeY, diameter, diameter)
+}
+
+function mousePressed () {
+  let d = dist(mouseX, mouseY, shapeX, shapeY)
+  if(d<radius) {
+    grabbed = true
+  }
+  else {
+    grabbed = false
+  }
+}
+
+function mouseReleased (){
+  grabbed = false;
+}
+
+function mouseDragged(){
+  if(grabbed){
+    shapeX = mouseX
+    shapeY = mouseY
+  }
+}
