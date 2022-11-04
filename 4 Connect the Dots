@@ -3,79 +3,98 @@ function setup() {
 }
 
 function draw() {
+  background(220);
+  
   //background
   background(300);
+  
+  //black rectangle
+  fill(50);
+  rect (0,0,1540,150);
 
-
-  fill('#222222');
-  circle(500,200,15);
+  //white rectangle
+  fill(300);
+  rect (0,150,1540,510)
   
-  textSize(15);
-  fill(255);
-  stroke (300);
-text('3', 495, 205);
+  //gold rectangle links
+  fill('gold')
+  rect (0,660,1540,40)
   
-  fill('#222222');
-circle(1400,378,15);
+   //text Fine Motor Skills
+  fill(300)
+  textSize(100);
+  stroke (0)
+  text ("Connecting The Dots", 350, 110);
   
-  textSize(15);
-  fill(255);
-  stroke (300);
-text('8', 1395, 383);
-  
-  fill('#222222');
- circle(1168,621,15);
-  
-  textSize(15);
-  fill(255);
-  stroke (300);
-text('7', 1163, 626);
-  
-  fill('#222222');
- circle(1032,553,15);
-  
-  textSize(15);
-  fill(255);
-  stroke (300);
-text('6', 1027, 558);
-  
-  fill('#222222');
-  circle(797, 132,15);
-  
-  textSize(15);
-  fill(255);
-  stroke (300);
-text('5', 792, 137);
-  
-  fill('#222222');
+  // creating dots in order
+  //#1
+   fill('#222222');
   circle(145,486,15);
-  
+
   textSize(15);
   fill(255);
   stroke (300);
 text('1', 140, 491);
   
+  //#3
+  fill('#222222');
+  circle(500,200,15);
 
-  
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('3', 495, 205);
+
+  fill('#222222');
+  circle(1400,378,15);
+circle(1400,378,15);
+
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('8', 1395, 383);
+
+  fill('#222222');
+  circle(1168,621,15);
+ circle(1168,621,15);
+
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('7', 1163, 626);
+
+  fill('#222222');
+  circle(1032,553,15);
+ circle(1032,553,15);
+
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('6', 1027, 558);
+
+  fill('#222222');
+  circle(797, 132,15);
+
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('5', 792, 137);
+
+
   fill('#222222');
   circle(700,350,15);
-  
+
   textSize(15);
   fill(255);
   stroke (300);
 text('4', 695, 355);
-  
+
   fill('#222222');
   circle(375,585,15);
-  
+
   textSize(15);
   fill(255);
   stroke (300);
 text('2', 370, 590);
-  
-  
-  
-  
-  
 
 }
