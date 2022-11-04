@@ -35,9 +35,9 @@ function draw() {
   
   
   fill ('rgb(209,204,204)')
-  square (250,450,150)
-  circle (770,520,150)
-  rect (1150,450,250,150)
+  circle (350,520,200)
+  circle (770,540,150)
+  circle (1250,500,250)
   
    fill('blue')
   ellipse(shapeX, shapeY, diameter, diameter)
