@@ -9,6 +9,7 @@ function setup() {
   // call functions for lv1
   displayInputBox();
   displaySB();
+  
 }
 
 function draw() {
@@ -53,4 +54,11 @@ function displaySB(){
   submitB.size(150,50);
   submitB.style('color:black');
   submitB.style('background-color:gold');
+}
+
+function displayEQlv1(){
+  
+}
+function deleteEQ(){
+  
 }
