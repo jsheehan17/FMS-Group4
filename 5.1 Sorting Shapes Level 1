@@ -3,6 +3,7 @@ let shapeX;
 let shapeY;
 const radius = 87.5;
 const diameter = radius*2;
+let placed = false;
 
 function setup() {
   createCanvas(1540, 700);
@@ -43,14 +44,14 @@ function draw() {
   
   //Greyed Out Circles
   fill ('rgb(209,204,204)')
-  circle (350,520,150)
-  circle (1200,275,175)
-  circle (1200,500,200)
-  circle (350,285,225)
+  circleOne = circle (350,520,150)
+  circleTwo = circle (1200,275,175)
+  circleThree = circle (1200,500,200)
+  circleFour = circle (350,285,225)
   
   //Colored Circle 
   fill('blue')
-  ellipse(shapeX, shapeY, diameter, diameter)
+  answerCircle = ellipse(shapeX, shapeY, diameter, diameter)
 }
 
 function mousePressed () {
@@ -63,6 +64,24 @@ function mousePressed () {
   }
 }
 
+function mouseInCircle () {
+  if (answerCircle == circleTwo) {
+    placed = true;
+  }
+  else {
+    placed = false;
+  }
+  if (placed == true) {
+    fill ('green')
+    circle (700,200,50)
+  }
+  else {
+    fill ('red')
+    circle (800,200,50)
+  }
+  print(placed);
+}
+
 function mouseReleased (){
   grabbed = false;
 }
@@ -70,6 +89,6 @@ function mouseReleased (){
 function mouseDragged(){
   if(grabbed){
     shapeX = mouseX
-    shapeY = mouseY
-  }
+    shapeY = mouseY  
+  }  
 }
