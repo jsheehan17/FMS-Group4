@@ -1,21 +1,14 @@
 var answerBox;
 var submitB; 
-
+var inputVal;
+var eqNum1;
+var eqNum2;
 
 function setup() {
   createCanvas(1540, 700);
-  
-  // create submit button
-  submitB = createButton("submit");
-  submitB.position(720,550);
-  submitB.size(150,50);
-  submitB.style('color:black');
-  submitB.style('background-color:gold');
-  
-  // create text input (answer)
-  answerBox = createInput('');
-  answerBox.position(770,510);
-  answerBox.size(40,25);
+  // call functions for lv1
+  displayInputBox();
+  displaySB();
 }
 
 function draw() {
@@ -36,12 +29,28 @@ function draw() {
   fill('gold')
   rect (0,660,1540,40)
   
-   //text Fine Motor Skills
+   //text "Math Problems"
   fill(300)
   textSize(100);
   stroke (0)
   text ("Math Problems", 440, 110);
   
-  // Display equation
+}
+
+function displayInputBox(){
   
+  // create text input (answer)
+  answerBox = createInput('');
+  answerBox.position(770,510);
+  answerBox.size(40,25);
+}
+
+function displaySB(){
+  
+  // create submit button
+  submitB = createButton("submit");
+  submitB.position(720,550);
+  submitB.size(150,50);
+  submitB.style('color:black');
+  submitB.style('background-color:gold');
 }
