@@ -46,7 +46,6 @@ function displayEQlv1(){
   stroke(0);
   text("7-3", 440, 60);
 
-  
 }
 
 function displayABs(){
@@ -58,10 +57,21 @@ function displayABs(){
   correctA.style('background-color:gold');
   
   incorrectA = createButton("3");
-  incorrectA.position(630, 470)
+  incorrectA.position(630, 470);
   incorrectA.size(90,60);
   incorrectA.style('color:black');
   incorrectA.style('background-color:gold');
+  
+  incorrectA2 = createButton("2");
+  incorrectA2.position(870, 470);
+  incorrectA2.size(90,60);
+  incorrectA2.style('color:black');
+  incorrectA2.style('background-color:gold');
+}
+
+// determine if button pressed is correct
+function determineA(){
+  
 }
 // feedback
 function displayFB(){
