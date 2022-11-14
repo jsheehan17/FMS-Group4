@@ -3,12 +3,24 @@ let shapeX;
 let shapeY;
 const radius = 100;
 const diameter = radius*2;
+let answer = false;
 
 function setup() {
   createCanvas(1540, 700);
   
   shapeX = width/2;
   shapeY = height/2;
+}
+
+function checkAnswer() {
+      if (answer == true) {
+        fill('green')
+        circle (770, 200, 60)
+      }
+      if (answer == false) {
+        fill('red')
+        circle (770, 200, 60)
+      }
 }
 
 function draw() {
@@ -40,6 +52,7 @@ function draw() {
   check.style ('color:black')
   check.style ('background-color: rgb(211,207,207)')
   check.style ('font-size','20px')
+  check.mousePressed (checkAnswer)
   
   //Greyed Out Circles
   fill ('rgb(209,204,204)')
@@ -65,6 +78,16 @@ function mousePressed () {
 
 function mouseReleased (){
   grabbed = false;
+  print (shapeX, shapeY)
+  
+  if (((shapeX >= 1195)&&(shapeX <= 1205))&&((shapeY >= 495)&&(shapeY <= 505))){
+      answer = true;
+      print (answer);
+    }
+    else {
+      answer = false;
+      print (answer);
+    }
 }
 
 function mouseDragged(){
