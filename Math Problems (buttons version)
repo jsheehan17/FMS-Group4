@@ -1,17 +1,13 @@
 var incorrectA;
 var incorrectA2;
 var correctA;
-var eqNum1;
-var eqNum2;
 
 function setup() {
   createCanvas(1540, 700);
   // call functions for lv1
-  displayEQlv1();
   displayABs();
   displaySB();
   deleteEQ();
-  
 }
 
 function draw() {
@@ -38,14 +34,12 @@ function draw() {
   stroke (0)
   text ("Math Problems", 440, 110);
   
-}
-
-function displayEQlv1(){
-  fill(300)
+  // display lv1 equations
+  
+  fill('black');
   textSize(50);
   stroke(0);
-  text("7-3", 440, 60);
-
+  text("7-3", 750, 400);
 }
 
 function displayABs(){
@@ -69,13 +63,11 @@ function displayABs(){
   incorrectA2.style('background-color:gold');
 }
 
-// determine if button pressed is correct
+// determine if button pressed is correct, display fb
 function determineA(){
-  
-}
-// feedback
-function displayFB(){
-  
+  if (correctA.pressed){
+    
+  }
 }
 
 // delete equation after ans
