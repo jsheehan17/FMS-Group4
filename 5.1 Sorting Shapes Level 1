@@ -96,3 +96,39 @@ function mouseDragged(){
     shapeY = mouseY  
   }
 }
+
+function checkAnswer() {
+  print("Answer Checked")
+  if (answer == true) {
+    correct()
+  }
+  if (answer == false) {
+    incorrect()
+  }
+}
+
+function correct() {
+  correct = createButton ("Correct")
+  correct.position (690, 200)
+  correct.size (150,50)
+  correct.style ('black')
+  correct.style ('background-color: rgb(116,247,116)')
+  correct.style ('font-size','25px')
+  
+  next = createButton ("Next Level")
+  next.position (690, 500)
+  next.size (150,50)
+  next.style ('color:black')
+  next.style ('background-color: rgb(211,207,207)')
+  next.style ('font-size','20px')
+  next.mousePressed ()
+}
+
+function incorrect() {
+  incorrect = createButton ("Incorrect")
+  incorrect.position (690, 200)
+  incorrect.size (150,50)
+  incorrect.style ('black')
+  incorrect.style ('background-color: rgb(255,82,82)')
+  incorrect.style ('font-size','25px')
+}
