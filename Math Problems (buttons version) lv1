@@ -76,5 +76,5 @@ function displayFBinc(){
   textSize(60);
   fill('red');
   stroke(0);
-  text("Incorrect!",660,300);
+  text("Incorrect!",670,300);
 }
