@@ -1,18 +1,7 @@
-var incorrectA;
-var incorrectA2;
-var correctA;
-
 function setup() {
   createCanvas(1540, 700);
-  // call functions for lv4
-  displayABs();
-  deleteEQ();
-}
-
-function draw() {
-  background(220);
   
-  //background
+   //background
   background(300);
   
   //black rectangle
@@ -34,17 +23,18 @@ function draw() {
   text ("Math Problems", 440, 110);
   
   // display lv4 equation
-  
   fill('black');
   textSize(50);
   stroke(0);
-  text("15/5", 750, 400);
-}
-
-function displayABs(){
-  // correct answer
+  text("15 / 5 = ?", 685, 400);
+  
+  // dispay answer boxs 
+  var correctA;
+  var incorrectA;
+  var incorrectA2;
+  
   correctA = createButton("3");
-  correctA.position(750, 470);
+  correctA.position(870, 470);
   correctA.size(90,60);
   correctA.style('color:black');
   correctA.style('background-color:gold');
@@ -56,20 +46,35 @@ function displayABs(){
   incorrectA.style('background-color:gold');
   
   incorrectA2 = createButton("20");
-  incorrectA2.position(870, 470);
+  incorrectA2.position(750, 470);
   incorrectA2.size(90,60);
   incorrectA2.style('color:black');
   incorrectA2.style('background-color:gold');
-}
-
-// determine if button pressed is correct, display fb
-function determineA(){
-  if (correctA.pressed){
-    
-  }
-}
-
-// delete equation after ans
-function deleteEQ(){
   
+  // display 'Correct!' feedback
+  correctA.mousePressed(displayFBc);
+ 
+  //display 'Incorrect!'
+  incorrectA.mousePressed(displayFBinc);
+  
+  incorrectA2.mousePressed(displayFBinc);
+}
+
+function draw() {
+ 
+}
+
+// feedback functions
+function displayFBc(){
+  textSize(60);
+  fill('green');
+  stroke(0);
+  text("Correct!",685,300);
+}
+
+function displayFBinc(){
+  textSize(60);
+  fill('red');
+  stroke(0);
+  text("Incorrect!",670,300);
 }
