@@ -4,10 +4,6 @@ function setup() {
   displaylvl1();
 }
 
-function draw() {
- 
-}
-
 // (create or reset equation/feedback for lv1)
 function displaylvl1(){
   //display background
@@ -188,7 +184,7 @@ function displayFBcL2(){
   nextB.style('color:black');
   nextB.style('background-color:gold');
   
-  nextB.mousePressed(displaylvl2)
+  nextB.mousePressed(displaylvl3)
 }
 
 // incorrect feedback function lv2 (restarts lv2)
@@ -207,12 +203,106 @@ function displayFBincL2(){
   
   tryAgainB.mousePressed(displaylvl2);
   
+}
+}
+
+// display lv3 function
+function displaylvl3(){
+  createCanvas(1540, 700);
+  
+   //background
+  background(300);
+  
+  //black rectangle
+  fill(50);
+  rect (0,0,1540,150);
+
+  //white rectangle
+  fill(300);
+  rect (0,150,1540,510)
+  
+  //gold rectangle links
+  fill('gold')
+  rect (0,660,1540,40)
+  
+   //text "Math Problems"
+  fill(300)
+  textSize(100);
+  stroke (0)
+  text ("Math Problems", 440, 110);
+  
+  // display lv3 equation
+  fill('black');
+  textSize(50);
+  stroke(0);
+  text("8 x 5 = ?", 700, 400);
+  
+  // dispay answer boxs 
+  var correctA;
+  var incorrectA;
+  var incorrectA2;
+  
+  correctA = createButton("40");
+  correctA.position(750, 470);
+  correctA.size(90,60);
+  correctA.style('color:black');
+  correctA.style('background-color:gold');
+  
+  incorrectA = createButton("45");
+  incorrectA.position(630, 470);
+  incorrectA.size(90,60);
+  incorrectA.style('color:black');
+  incorrectA.style('background-color:gold');
+  
+  incorrectA2 = createButton("13");
+  incorrectA2.position(870, 470);
+  incorrectA2.size(90,60);
+  incorrectA2.style('color:black');
+  incorrectA2.style('background-color:gold');
+  
   // display 'Correct!' feedback
-  correctA.mousePressed(displayFBcL2);
+  correctA.mousePressed(displayFBcL3);
  
   //display 'Incorrect!'
-  incorrectA.mousePressed(displayFBincL2);
+  incorrectA.mousePressed(displayFBincL3);
   
-  incorrectA2.mousePressed(displayFBincL2);
+  incorrectA2.mousePressed(displayFBincL3);
+
+function displayFBcL3(){
+  textSize(60);
+  fill('green');
+  stroke(0);
+  text("Correct!",690,300);
+  
+  // create next button (when correct)
+   let nextB = createButton("next");
+  nextB.position(750, 600);
+  nextB.size(90,40);
+  nextB.style('color:black');
+  nextB.style('background-color:gold');
+  
+  nextB.mousePressed(displaylvl4)
 }
+
+// incorrect feedback function lv3 (restarts lv3)
+function displayFBincL3(){
+  textSize(60);
+  fill('red');
+  stroke(0);
+  text("Incorrect!",670,300);
+  
+  //create try again button
+  var tryAgainB = createButton("Try Again")
+  tryAgainB.position(750, 550);
+  tryAgainB.size(90,40);
+  tryAgainB.style('color:black');
+  tryAgainB.style('background-color:gold');
+  
+  tryAgainB.mousePressed(displaylvl3);
+}
+}
+
+// display lv4 function
+function displaylvl4(){
+  
 }
