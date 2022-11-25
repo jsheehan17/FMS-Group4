@@ -1,74 +1,57 @@
 function setup() {
   createCanvas(1540, 700);
   
-   //background
+  //background
   background(300);
 
   //black rectangle
   fill(50);
   rect (0,0,1540,170);
 
-  //white rectangle
-  fill(300);
-  rect (0,170,1540,180)
-
   //bottom gold rectangle
   fill('gold');
-  rect (0,350,1540,300);
+  rect (0,170,1540,500);
 
   //links rectangle
   fill(300);
   rect (0,650,1540,50)
   
-  //text Fine Motor Skills
+  //text Children / Toddlers
   textSize(100);
   stroke (0)
-  text ("Fine Motor Skills", 400, 120);
+  text ("Fine Motor Skills", 405, 120);
   
-  //text What is FMS
-  textSize(20)
-  stroke(300)
-  fill(0)
-  text("What Are Fine Motor Skills:  Fine Motor Skills (FMS) are basic hand eye coordination movements that are important in all individuals. These movements are very", 15, 390)
-  text("important in laying the foundation for toddlers and young children. These are not the only individuals that would benefit from practicing their FMS, stroke victims practice", 15, 420)
-  text("FMS skills to rehab and regain their normal movements.", 15, 450)
+  //Connect The Dots Button 
+  dots_button = createButton ("Connect The Dots")
+  dots_button.position (380, 220)
+  dots_button.size (800,100)
+  dots_button.style ('color:black')
+  dots_button.style ('background-color: white')
+  dots_button.style ('font-size','36px')
   
-  //text Our Goal
-  textSize(20)
-  stroke(300)
-  fill(0)
-  text("Our Goal: Our goal is to design and implement an easy to use program for individuals of all skill levels. We want to help young kids and recovering adults to improve their", 15, 540)
-   text("Fine Motor Skills and create a strong foundation for the rest of their lives. We also want to do this completely digitally in order to create a more convenient program.", 15, 570)
+  dots_button.mousePressed(); // input function for lvl 1 of Connecting the Dots
   
-  //text Toddlers
-  textSize(30)
-  stroke(300)
-  fill(0)
-  text ("Children / Toddlers",380 , 270)
+  //Sorting Shapes Victims Button 
+  shape_button = createButton ("Sorting Shapes")
+  shape_button.position (380, 350)
+  shape_button.size (800,100)
+  shape_button.style ('color:black')
+  shape_button.style ('background-color: white')
+  shape_button.style ('font-size','36px')
   
-  //text Toddlers
-  textSize(30)
-  stroke(300)
-  fill(0)
-  text ("Stroke Victims",910 , 270)
+  shape_button.mousePressed(); // input function for lvl 1 of Sorting Shapes
   
-  //Children Button 
-  children_button = createButton ("Children / Toddlers")
-  children_button.position (210, 210)
-  children_button.size (450,100)
-  children_button.style ('color:black')
-  children_button.style ('background-color: gold')
-  children_button.style ('font-size','36px')
+  //Math Problems Button 
+  math_button = createButton ("Math Problems")
+  math_button.position (380, 480)
+  math_button.size (800,100)
+  math_button.style ('color:black')
+  math_button.style ('background-color: white')
+  math_button.style ('font-size','36px')
   
-  //Stroke Victims Button 
-  stroke_button = createButton ("Stroke Victims")
-  stroke_button.position (860, 210)
-  stroke_button.size (450,100)
-  stroke_button.style ('color:black')
-  stroke_button.style ('background-color: gold')
-  stroke_button.style ('font-size','36px')
+  math_button.mousePressed(); // input displaylvl1 for Math Problems.
 }
 
 function draw() {
- 
+  
 }
