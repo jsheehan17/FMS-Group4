@@ -1,9 +1,7 @@
 function setup() {
   createCanvas(1540, 700);
-}
-
-function draw() {
-  //background
+  
+   //background
   background(300);
 
   //black rectangle
@@ -69,4 +67,8 @@ function draw() {
   stroke_button.style ('color:black')
   stroke_button.style ('background-color: gold')
   stroke_button.style ('font-size','36px')
+}
+
+function draw() {
+ 
 }
