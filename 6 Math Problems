@@ -352,9 +352,26 @@ function displayPW(){
   mpBackground();
   
   // "Well Done!" text
+  textSize(60);
+  fill('green');
+  stroke(0);
+  text("Well Done!",660,350);
   
   // play again button
+  var playAgainB = createButton("Play Again")
+  playAgainB.position(750, 550);
+  playAgainB.size(90,40);
+  playAgainB.style('color:black');
+  playAgainB.style('background-color:gold');
+  
+  playAgainB.mousePressed(displaylvl1); // goes back to lvl 1
   
   // back to home button
+   let homeB = createButton("Home");
+  homeB.position(750, 600);
+  homeB.size(90,40);
+  homeB.style('color:black');
+  homeB.style('background-color:gold');
   
+  homeB.mousePressed(); // goes back to home menu
 }
