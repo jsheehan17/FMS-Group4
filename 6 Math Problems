@@ -4,10 +4,9 @@ function setup() {
   displaylvl1();
 }
 
-// (create or reset equation/feedback for lv1)
-function displaylvl1(){
-  //display background
-  createCanvas(1540, 700);
+// Math problems display background function
+function mpBackground(){
+    createCanvas(1540, 700);
   
    //background
   background(300);
@@ -29,13 +28,19 @@ function displaylvl1(){
   textSize(100);
   stroke (0)
   text ("Math Problems", 440, 110);
+  }
+
+// (create or reset equation/feedback for lv1)
+function displaylvl1(){
   
+  //display background
+ mpBackground();
   
   // display lv1 equation
   fill('black');
   textSize(50);
   stroke(0);
-  text("7-3 = ?", 720, 400);
+  text("7 - 3 = ?", 720, 400);
     
   // display answer boxs 
   var correctA;
@@ -106,28 +111,9 @@ function displayFBincL1(){
 
 // display lv2 function 
 function displaylvl2(){
-  createCanvas(1540, 700);
   
-   //background
-  background(300);
-  
-  //black rectangle
-  fill(50);
-  rect (0,0,1540,150);
-
-  //white rectangle
-  fill(300);
-  rect (0,150,1540,510)
-  
-  //gold rectangle links
-  fill('gold')
-  rect (0,660,1540,40)
-  
-   //text "Math Problems"
-  fill(300)
-  textSize(100);
-  stroke (0)
-  text ("Math Problems", 440, 110);
+  // background
+  mpBackground();
   
   // display lv2 equation
   fill('black');
@@ -206,28 +192,9 @@ function displayFBincL2(){
 
 // display lv3 function
 function displaylvl3(){
-  createCanvas(1540, 700);
   
-   //background
-  background(300);
-  
-  //black rectangle
-  fill(50);
-  rect (0,0,1540,150);
-
-  //white rectangle
-  fill(300);
-  rect (0,150,1540,510)
-  
-  //gold rectangle links
-  fill('gold')
-  rect (0,660,1540,40)
-  
-   //text "Math Problems"
-  fill(300)
-  textSize(100);
-  stroke (0)
-  text ("Math Problems", 440, 110);
+  // background
+  mpBackground();
   
   // display lv3 equation
   fill('black');
@@ -302,28 +269,9 @@ function displayFBincL3(){
 
 // display lv4 function
 function displaylvl4(){
-   createCanvas(1540, 700);
   
-   //background
-  background(300);
-  
-  //black rectangle
-  fill(50);
-  rect (0,0,1540,150);
-
-  //white rectangle
-  fill(300);
-  rect (0,150,1540,510)
-  
-  //gold rectangle links
-  fill('gold')
-  rect (0,660,1540,40)
-  
-   //text "Math Problems"
-  fill(300)
-  textSize(100);
-  stroke (0)
-  text ("Math Problems", 440, 110);
+  // background
+  mpBackground();
   
   // display lv4 equation
   fill('black');
@@ -376,7 +324,7 @@ function displayFBcL4(){
   nextB.style('color:black');
   nextB.style('background-color:gold');
   
-  nextB.mousePressed(displaylvl4)
+  nextB.mousePressed();
 }
 
 // incorrect feedback function lv4 (restarts lv4)
@@ -395,4 +343,18 @@ function displayFBincL4(){
   
   tryAgainB.mousePressed(displaylvl4);
 }
+}
+
+// game over function (player won)
+function displayPW(){
+  
+  // background 
+  mpBackground();
+  
+  // "Well Done!" text
+  
+  // play again button
+  
+  // back to home button
+  
 }
