@@ -83,7 +83,7 @@ function displayFBcL1(){
   
   // create next button (when correct)
    let nextB = createButton("next");
-  nextB.position(750, 600);
+  nextB.position(870, 600);
   nextB.size(90,40);
   nextB.style('color:black');
   nextB.style('background-color:gold');
@@ -100,7 +100,7 @@ function displayFBincL1(){
   
   //create try again button
   var tryAgainB = createButton("Try Again")
-  tryAgainB.position(750, 550);
+  tryAgainB.position(630, 600);
   tryAgainB.size(90,40);
   tryAgainB.style('color:black');
   tryAgainB.style('background-color:gold');
@@ -163,7 +163,7 @@ function displayFBcL2(){
   
   // create next button (when correct)
    let nextB = createButton("next");
-  nextB.position(750, 600);
+  nextB.position(870, 600);
   nextB.size(90,40);
   nextB.style('color:black');
   nextB.style('background-color:gold');
@@ -180,7 +180,7 @@ function displayFBincL2(){
   
   //create try again button
   var tryAgainB = createButton("Try Again")
-  tryAgainB.position(750, 550);
+  tryAgainB.position(630, 600);
   tryAgainB.size(90,40);
   tryAgainB.style('color:black');
   tryAgainB.style('background-color:gold');
@@ -241,7 +241,7 @@ function displayFBcL3(){
   
   // create next button (when correct)
    let nextB = createButton("next");
-  nextB.position(750, 600);
+  nextB.position(870, 600);
   nextB.size(90,40);
   nextB.style('color:black');
   nextB.style('background-color:gold');
@@ -258,7 +258,7 @@ function displayFBincL3(){
   
   //create try again button
   var tryAgainB = createButton("Try Again")
-  tryAgainB.position(750, 550);
+  tryAgainB.position(630, 600);
   tryAgainB.size(90,40);
   tryAgainB.style('color:black');
   tryAgainB.style('background-color:gold');
@@ -319,12 +319,12 @@ function displayFBcL4(){
   
   // create next button (when correct)
    let nextB = createButton("next");
-  nextB.position(750, 600);
+  nextB.position(870, 600);
   nextB.size(90,40);
   nextB.style('color:black');
   nextB.style('background-color:gold');
   
-  nextB.mousePressed();
+  nextB.mousePressed(displayPW); // display Player Won menu
 }
 
 // incorrect feedback function lv4 (restarts lv4)
@@ -336,7 +336,7 @@ function displayFBincL4(){
   
   //create try again button
   var tryAgainB = createButton("Try Again")
-  tryAgainB.position(750, 550);
+  tryAgainB.position(630, 600);
   tryAgainB.size(90,40);
   tryAgainB.style('color:black');
   tryAgainB.style('background-color:gold');
