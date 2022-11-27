@@ -1,0 +1,311 @@
+function setup() {
+  scDisplaylv1();
+}
+
+function scBackground (){
+  createCanvas(1540, 700);
+  
+  //background
+  background(300);
+  
+  //black rectangle
+  fill(50);
+  rect (0,0,1540,150);
+
+  //white rectangle
+  fill(300);
+  rect (0,150,1540,510)
+  
+  //gold rectangle links
+  fill('gold')
+  rect (0,660,1540,40)
+  
+   //text Connecting the Dots
+  fill(300)
+  textSize(100);
+  stroke (0)
+  text ("Shades Of Color", 440, 110);
+    
+  // home button 
+  homeB = createButton("Home");
+  homeB.position(750, 600);
+  homeB.size(90,40);
+  homeB.style('color:black');
+  homeB.style('background-color:gold');
+  
+  homeB.mousePressed();
+}
+
+function scDisplaylv1(){
+  // setup for lvl 1
+  removeElements();
+  
+  scBackground ();
+  
+  // create rectangle buttons
+  var correctR = createButton("");
+  correctR.position(750, 400);
+  correctR.size(90,140);
+  correctR.style('background-color:gray');
+  
+  correctR.mousePressed(scDisplayFBcL1);
+  
+  var incorrectR1 = createButton("");
+  incorrectR1.position(660, 400);
+  incorrectR1.size(90,140);
+  incorrectR1.style('background-color:black');
+  
+  incorrectR1.mousePressed(scDisplayFBincL1);
+  
+   var incorrectR2 = createButton("");
+  incorrectR2.position(840, 400);
+  incorrectR2.size(90,140);
+  incorrectR2.style('background-color:black');
+  
+  incorrectR2.mousePressed(scDisplayFBincL1);
+  
+  // feedback functions
+  function scDisplayFBcL1(){
+  textSize(60);
+  fill('green');
+  stroke(0);
+  text("Correct!",690,300);
+  
+  // create next button (when correct)
+   let nextB = createButton("next");
+  nextB.position(870, 600);
+  nextB.size(90,40);
+  nextB.style('color:black');
+  nextB.style('background-color:gold');
+  
+  nextB.mousePressed(scDisplaylv2)
+}
+  
+  function scDisplayFBincL1(){
+  textSize(60);
+  fill('red');
+  stroke(0);
+  text("Incorrect!",670,300);
+  
+  //create try again button
+  var tryAgainB = createButton("Try Again")
+  tryAgainB.position(630, 600);
+  tryAgainB.size(90,40);
+  tryAgainB.style('color:black');
+  tryAgainB.style('background-color:gold');
+  
+  tryAgainB.mousePressed(scDisplaylv1);
+}
+}
+
+function scDisplaylv2(){
+   // setup for lvl 2
+  removeElements();
+  
+  scBackground ();
+  
+  // create rectangle buttons
+  var correctR = createButton("");
+  correctR.position(836, 400);
+  correctR.size(90,140);
+  correctR.style('background-color:green');
+  
+  correctR.mousePressed(scDisplayFBcL2);
+  
+  var incorrectR1 = createButton("");
+  incorrectR1.position(660, 400);
+  incorrectR1.size(90,140);
+  incorrectR1.style('background-color:darkgreen');
+  
+  incorrectR1.mousePressed(scDisplayFBincL2);
+  
+   var incorrectR2 = createButton("");
+  incorrectR2.position(749, 400);
+  incorrectR2.size(90,140);
+  incorrectR2.style('stroke:white');
+  incorrectR2.style('background-color:darkgreen');
+  
+  incorrectR2.mousePressed(scDisplayFBincL2);
+  
+  // feedback functions
+  function scDisplayFBcL2(){
+  textSize(60);
+  fill('green');
+  stroke(0);
+  text("Correct!",690,300);
+  
+  // create next button (when correct)
+   let nextB = createButton("next");
+  nextB.position(870, 600);
+  nextB.size(90,40);
+  nextB.style('color:black');
+  nextB.style('background-color:gold');
+  
+  nextB.mousePressed(scDisplaylv3)
+}
+  
+  function scDisplayFBincL2(){
+  textSize(60);
+  fill('red');
+  stroke(0);
+  text("Incorrect!",670,300);
+  
+  //create try again button
+  var tryAgainB = createButton("Try Again")
+  tryAgainB.position(630, 600);
+  tryAgainB.size(90,40);
+  tryAgainB.style('color:black');
+  tryAgainB.style('background-color:gold');
+  
+  tryAgainB.mousePressed(scDisplaylv2);
+}
+}
+
+function scDisplaylv3(){
+   // setup for lvl 3
+  removeElements();
+  
+  scBackground ();
+  
+  // create rectangle buttons
+  var correctR = createButton("");
+  correctR.position(660, 400);
+  correctR.size(90,140);
+  correctR.style('background-color:lightgreen');
+  
+  correctR.mousePressed(scDisplayFBcL3);
+  
+  var incorrectR1 = createButton("");
+  incorrectR1.position(836, 400);
+  incorrectR1.size(90,140);
+  incorrectR1.style('background-color:lime');
+  
+  incorrectR1.mousePressed(scDisplayFBincL3);
+  
+   var incorrectR2 = createButton("");
+  incorrectR2.position(749, 400);
+  incorrectR2.size(90,140);
+  incorrectR2.style('stroke:white');
+  incorrectR2.style('background-color:lime');
+  
+  incorrectR2.mousePressed(scDisplayFBincL3);
+  
+  // feedback functions
+  function scDisplayFBcL3(){
+  textSize(60);
+  fill('green');
+  stroke(0);
+  text("Correct!",690,300);
+  
+  // create next button (when correct)
+   let nextB = createButton("next");
+  nextB.position(870, 600);
+  nextB.size(90,40);
+  nextB.style('color:black');
+  nextB.style('background-color:gold');
+  
+  nextB.mousePressed(scDisplaylv4)
+}
+  
+  function scDisplayFBincL3(){
+  textSize(60);
+  fill('red');
+  stroke(0);
+  text("Incorrect!",670,300);
+  
+  //create try again button
+  var tryAgainB = createButton("Try Again")
+  tryAgainB.position(630, 600);
+  tryAgainB.size(90,40);
+  tryAgainB.style('color:black');
+  tryAgainB.style('background-color:gold');
+  
+  tryAgainB.mousePressed(scDisplaylv3);
+}
+}
+
+function scDisplaylv4(){
+   // setup for lvl 4
+  removeElements();
+  
+  scBackground ();
+  
+  // create rectangle buttons
+  var correctR = createButton("");
+  correctR.position(836, 400);
+  correctR.size(90,140);
+  correctR.style('background-color:darkblue');
+  
+  correctR.mousePressed(scDisplayFBcL4);
+  
+  var incorrectR1 = createButton("");
+  incorrectR1.position(749, 400);
+  incorrectR1.size(90,140);
+  incorrectR1.style('background-color:navy');
+  
+  incorrectR1.mousePressed(scDisplayFBincL4);
+  
+   var incorrectR2 = createButton("");
+  incorrectR2.position(660, 400);
+  incorrectR2.size(90,140);
+  incorrectR2.style('stroke:white');
+  incorrectR2.style('background-color:navy');
+  
+  incorrectR2.mousePressed(scDisplayFBincL4);
+  
+  // feedback functions
+  function scDisplayFBcL4(){
+  textSize(60);
+  fill('green');
+  stroke(0);
+  text("Correct!",690,300);
+  
+  // create next button (when correct)
+   let nextB = createButton("next");
+  nextB.position(870, 600);
+  nextB.size(90,40);
+  nextB.style('color:black');
+  nextB.style('background-color:gold');
+  
+  nextB.mousePressed(socPW);
+}
+  
+  function scDisplayFBincL4(){
+  textSize(60);
+  fill('red');
+  stroke(0);
+  text("Incorrect!",670,300);
+  
+  //create try again button
+  var tryAgainB = createButton("Try Again")
+  tryAgainB.position(630, 600);
+  tryAgainB.size(90,40);
+  tryAgainB.style('color:black');
+  tryAgainB.style('background-color:gold');
+  
+  tryAgainB.mousePressed(scDisplaylv4);
+}
+}
+
+function socPW(){
+   // remove any previous buttons/elements
+  removeElements();
+  
+  // background 
+  scBackground();
+  
+  // "Well Done!" text
+  textSize(60);
+  fill('green');
+  stroke(0);
+  text("Well Done!",660,350);
+  
+  // play again button
+  var playAgainB = createButton("Play Again")
+  playAgainB.position(750, 550);
+  playAgainB.size(90,40);
+  playAgainB.style('color:black');
+  playAgainB.style('background-color:gold');
+  
+  playAgainB.mousePressed(scDisplaylv1); // goes back to lvl 1
+}
