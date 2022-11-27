@@ -1,17 +1,100 @@
-let grabbed = false;
-let shapeX;
-let shapeY;
-const radius = 75;
-const diameter = radius*2;
-
 function setup() {
+  shapesOne ()
+}
+
+function shapesOne () {
+  
+  removeElements();
+  
+  createCanvas(1540, 700);
+  
+  shapeOne = true
+  shapeTwo = false
+  shapeThree = false
+  shapeFour = false
+  
+  shapeX = width/2;
+  shapeY = height/2;
+  
+  radius = 87.5
+  diameter = radius * 2
+  
+  shapesBackground()
+  
+  fill('blue')
+  ellipse(shapeX, shapeY, diameter, diameter)
+}
+
+function shapesTwo () {
+  
+  removeElements();
+  
   createCanvas(1540, 700);
   
   shapeX = width/2;
   shapeY = height/2;
+  
+  shapeOne = false
+  shapeTwo = true
+  shapeThree = false
+  shapeFour = false
+  
+  radius = 100
+  diameter = radius * 2
+  
+  shapesBackground()
+  
+  fill('red')
+  circleTwo = ellipse(shapeX, shapeY, diameter, diameter)  
 }
 
-function draw() {
+function shapesThree () {
+  
+  removeElements();
+  
+  createCanvas(1540, 700);
+  
+  shapeX = width/2;
+  shapeY = height/2;
+  
+  shapeOne = false
+  shapeTwo = false
+  shapeThree = true
+  shapeFour = false
+  
+  radius = 112.5
+  diameter = radius * 2
+  
+  shapesBackground()
+  
+  fill('green')
+  circleTwo = ellipse(shapeX, shapeY, diameter, diameter)
+}
+
+function shapesFour () {
+  
+  removeElements();
+  
+  createCanvas(1540, 700);
+  
+  shapeX = width/2;
+  shapeY = height/2;
+  
+  shapeOne = false
+  shapeTwo = false
+  shapeThree = false
+  shapeFour = true
+  
+  radius = 75
+  diameter = radius * 2
+  
+  shapesBackground()
+  
+  fill('gold')
+  circleTwo = ellipse(shapeX, shapeY, diameter, diameter)
+}
+
+function shapesBackground () {
   //background
   background(300);
   
@@ -33,14 +116,22 @@ function draw() {
   stroke (0)
   text ("Sorting Shapes", 440, 110);
   
+  //Check Button 
+  check = createButton ("Check")
+  check.position (690, 575)
+  check.size (150,50)
+  check.style ('color:black')
+  check.style ('background-color: rgb(211,207,207)')
+  check.style ('font-size','20px')
   
+  check.mousePressed (checkAnswer)
+  
+  //Greyed Out Circles
   fill ('rgb(209,204,204)')
-  circle (350,520,200)
-  circle (770,540,150)
-  circle (1250,500,250)
-  
-   fill('blue')
-  ellipse(shapeX, shapeY, diameter, diameter)
+  circleOne = circle (350,520,150)
+  circleTwo = circle (1200,275,175)
+  circleThree = circle (1200,500,200)
+  circleFour = circle (350,285,225)
 }
 
 function mousePressed () {
@@ -55,11 +146,163 @@ function mousePressed () {
 
 function mouseReleased (){
   grabbed = false;
+  print (shapeX, shapeY)
+  
+  if (shapeOne == true) {
+    if (((shapeX >= 1195)&&(shapeX <= 1205))&&((shapeY >= 270)&&(shapeY <= 280))){
+      answer = true;
+      print (answer);
+    }
+    else {
+      answer = false;
+      print (answer);
+    }
+  }
+  
+  if (shapeTwo == true) {
+    if (((shapeX >= 1195)&&(shapeX <= 1205))&&((shapeY >= 495)&&(shapeY <= 505))){
+      answer = true;
+      print (answer);
+    }
+    else {
+      answer = false;
+      print (answer);
+    }
+  }
+  
+  if (shapeThree == true) {
+    if (((shapeX >= 345)&&(shapeX <= 355))&&((shapeY >= 280)&&(shapeY <= 290))){
+      answer = true;
+      print (answer);
+    }
+    else {
+      answer = false;
+      print (answer);
+    }
+  }
+  
+  if (shapeFour == true) {
+    if (((shapeX >= 345)&&(shapeX <= 355))&&((shapeY >= 515)&&(shapeY <= 525))){
+      answer = true;
+      print (answer);
+    }
+    else {
+      answer = false;
+      print (answer);
+    }
+  }
 }
 
-function mouseDragged(){
+function mouseDragged (){
   if(grabbed){
     shapeX = mouseX
-    shapeY = mouseY
+    shapeY = mouseY  
+    
+  shapesBackground()
+  
+  if (shapeOne == true) {
+    fill('blue')
+    ellipse(shapeX, shapeY, diameter, diameter)
+  }
+  
+  if (shapeTwo == true) {
+    fill('red')
+    circleTwo = ellipse(shapeX, shapeY, diameter, diameter)  
+  }
+  
+  if (shapeThree == true) {
+    fill('green')
+    ellipse(shapeX, shapeY, diameter, diameter)
+  }
+  
+  if (shapeFour == true) {
+    fill('gold')
+    ellipse(shapeX, shapeY, diameter, diameter)
+  }
+    
+  }
+}
+
+function checkAnswer() {
+  print("Answer Checked")
+  if (answer == true) {
+    correctAnswer()
+  }
+  if (answer == false) {
+    incorrectAnswer()
+  }
+}
+
+function correctAnswer () {
+  correct = createButton ("Correct")
+  correct.position (690, 200)
+  correct.size (150,50)
+  correct.style ('black')
+  correct.style ('background-color: rgb(116,247,116)')
+  correct.style ('font-size','25px')
+  
+  if ((shapeOne == true)||(shapeTwo == true)||(shapeThree == true)) {
+    next = createButton ("Next Level")
+    next.position (690, 500)
+    next.size (150,50)
+    next.style ('color:black')
+    next.style ('background-color: rgb(211,207,207)')
+    next.style ('font-size','20px')
+  
+    if (shapeOne == true) {
+    next.mousePressed (shapesTwo)
+    }
+  
+    if (shapeTwo == true) {
+    next.mousePressed (shapesThree)
+    }
+  
+    if (shapeThree == true) {
+    next.mousePressed (shapesFour)
+    }
+  }
+  
+  if (shapeFour == true) {
+    home = createButton ("Home Page")
+    home.position (690, 500)
+    home.size (150,50)
+    home.style ('color:black')
+    home.style ('background-color: rgb(211,207,207)')
+    home.style ('font-size','20px')
+    
+    home.mousePressed (homeMenu)
+  }
+  
+}
+
+function incorrectAnswer() {
+  incorrect = createButton ("Incorrect")
+  incorrect.position (690, 200)
+  incorrect.size (150,50)
+  incorrect.style ('black')
+  incorrect.style ('background-color: rgb(255,82,82)')
+  incorrect.style ('font-size','25px')
+  
+  retry = createButton ("Retry")
+  retry.position (690, 500)
+  retry.size (150,50)
+  retry.style ('color:black')
+  retry.style ('background-color: rgb(211,207,207)')
+  retry.style ('font-size','20px')
+  
+  if (shapeOne == true) {
+    retry.mousePressed (shapesOne)
+  }
+  
+  if (shapeTwo == true) {
+    retry.mousePressed (shapesTwo)
+  }
+  
+  if (shapeThree == true) {
+    retry.mousePressed (shapesThree)
+  }
+  
+  if (shapeFour == true) {
+    retry.mousePressed (shapesFour)
   }
 }
