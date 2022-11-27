@@ -1,5 +1,5 @@
 function setup() {
-  cdDisplaylvl1();
+  cdDisplaylvl4();
 }
 
 function cdBackground (){
@@ -63,12 +63,18 @@ text('2', 370, 590);
   fill(255);
   stroke (300);
   text('3', 495, 275);
+  
+  // next button 
+  var nextB = createButton("next");
+  nextB.position(300,300);
+  nextB.mousePressed(cdDisplaylvl2);
 }
 
 function cdDisplaylvl2(){
   //remove shapes/elements to setup lvl
   removeElements();
   
+  // display background
   cdBackground();
   
   //create dots in order
@@ -85,26 +91,69 @@ function cdDisplaylvl2(){
   text('4', 676, 375);
   
   //#5
-   //#5
   fill('#222222');
-  let dot5 = circle(797, 132, 18);
+  let dot5 = circle(797, 180, 18);
 
   textSize(15);
   fill(255);
   stroke (300);
-text('5', 792, 137);
+text('5', 792, 185);
 }
 
 function cdDisplaylvl3(){
   //remove shapes/elements to setup lvl
   removeElements();
   
+  // display background
   cdBackground();
+  
+  // dots: 1, 2, 3, 4, 5
+  cdDisplaylvl2();
+  
+  //#6
+   fill('black');
+  let dot6 = circle(1032,553,18);
+
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('6', 1027, 558);
+  
+  // #7
+   fill('black');
+  let dot7 = circle(1168,400,18);
+
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('7', 1163, 405);
 }
 
 function cdDisplaylvl4(){
   //remove shapes/elements to setup lvl
   removeElements();
   
+  // display background
   cdBackground();
+  
+  // dots 1-7
+  cdDisplaylvl3();
+  
+  // #8
+   fill('black');
+  let dot8 = circle(1300,500,18);
+  
+  textSize(15);
+  fill(255);
+  stroke (300);
+text('8', 1295, 505);
+  
+  // #9 
+  fill('black');
+  let dot9 = circle(1400,250,18);
+  
+  textSize(15);
+  fill(255);
+  stroke (300);
+  text('9', 1395, 255);
 }
