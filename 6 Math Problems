@@ -1,9 +1,3 @@
-function setup() {
-  
-  // Game Start (display lv1)
-  displaylvl1();
-}
-
 // Math problems display background function
 function mpBackground(){
     createCanvas(1540, 700);
@@ -33,6 +27,9 @@ function mpBackground(){
 // (create or reset equation/feedback for lv1)
 function displaylvl1(){
   
+  // remove any previous buttons/elements
+  removeElements();
+  
   //display background
  mpBackground();
   
@@ -46,6 +43,7 @@ function displaylvl1(){
   var correctA;
   var incorrectA;
   var incorrectA2;
+  var homeB;
   
   correctA = createButton("4");
   correctA.position(750, 470);
@@ -64,6 +62,15 @@ function displaylvl1(){
   incorrectA2.size(90,60);
   incorrectA2.style('color:black');
   incorrectA2.style('background-color:gold');
+  
+  // back to home button
+  homeB = createButton("Home");
+  homeB.position(750, 600);
+  homeB.size(90,40);
+  homeB.style('color:black');
+  homeB.style('background-color:gold');
+  
+  homeB.mousePressed(homeMenu);
   
    // display 'Correct!' feedback
   correctA.mousePressed(displayFBcL1);
@@ -112,6 +119,9 @@ function displayFBincL1(){
 // display lv2 function 
 function displaylvl2(){
   
+  // remove any previous buttons/elements
+  removeElements();
+  
   // background
   mpBackground();
   
@@ -125,6 +135,7 @@ function displaylvl2(){
   var correctA;
   var incorrectA;
   var incorrectA2;
+  var homeB;
   
   correctA = createButton("24");
   correctA.position(630, 470);
@@ -143,6 +154,15 @@ function displaylvl2(){
   incorrectA2.size(90,60);
   incorrectA2.style('color:black');
   incorrectA2.style('background-color:gold');
+  
+  // back to home button
+  homeB = createButton("Home");
+  homeB.position(750, 600);
+  homeB.size(90,40);
+  homeB.style('color:black');
+  homeB.style('background-color:gold');
+  
+  homeB.mousePressed(homeMenu);
   
    // display 'Correct!' feedback
   correctA.mousePressed(displayFBcL2);
@@ -193,6 +213,9 @@ function displayFBincL2(){
 // display lv3 function
 function displaylvl3(){
   
+  // remove any previous buttons/elements
+  removeElements();
+  
   // background
   mpBackground();
   
@@ -206,6 +229,7 @@ function displaylvl3(){
   var correctA;
   var incorrectA;
   var incorrectA2;
+  var homeB;
   
   correctA = createButton("40");
   correctA.position(750, 470);
@@ -224,6 +248,15 @@ function displaylvl3(){
   incorrectA2.size(90,60);
   incorrectA2.style('color:black');
   incorrectA2.style('background-color:gold');
+  
+  // back to home button
+  homeB = createButton("Home");
+  homeB.position(750, 600);
+  homeB.size(90,40);
+  homeB.style('color:black');
+  homeB.style('background-color:gold');
+  
+  homeB.mousePressed(homeMenu);
   
   // display 'Correct!' feedback
   correctA.mousePressed(displayFBcL3);
@@ -270,6 +303,9 @@ function displayFBincL3(){
 // display lv4 function
 function displaylvl4(){
   
+  // remove any previous buttons/elements
+  removeElements();
+  
   // background
   mpBackground();
   
@@ -279,10 +315,11 @@ function displaylvl4(){
   stroke(0);
   text("15 / 5 = ?", 685, 400);
   
-  // display answer boxs 
+  // display answer boxs/ home button
   var correctA;
   var incorrectA;
   var incorrectA2;
+  var homeB;
   
   correctA = createButton("3");
   correctA.position(870, 470);
@@ -301,6 +338,15 @@ function displaylvl4(){
   incorrectA2.size(90,60);
   incorrectA2.style('color:black');
   incorrectA2.style('background-color:gold');
+  
+  // back to home button
+  homeB = createButton("Home");
+  homeB.position(750, 600);
+  homeB.size(90,40);
+  homeB.style('color:black');
+  homeB.style('background-color:gold');
+  
+  homeB.mousePressed(homeMenu);
   
    // display 'Correct!' feedback
   correctA.mousePressed(displayFBcL4);
@@ -348,6 +394,9 @@ function displayFBincL4(){
 // game over function (player won)
 function displayPW(){
   
+  // remove any previous buttons/elements
+  removeElements();
+  
   // background 
   mpBackground();
   
@@ -373,5 +422,5 @@ function displayPW(){
   homeB.style('color:black');
   homeB.style('background-color:gold');
   
-  homeB.mousePressed(); // goes back to home menu
+  homeB.mousePressed(homeMenu); // goes back to home menu
 }
