@@ -1,31 +1,453 @@
-function setup() {
-  createCanvas(600, 600);
+function setup() { 
+  // setup function will create main menu
+  homeMenu();
 }
 
-// GUI Menu
-function draw() {
+// underneath the buttons is where all of our games will be
+function homeMenu(){
+  
+  // reset elements when returning to home menu
+  removeElements();
+  
+  createCanvas(1540, 700);
+  
   //background
+  background(300);
+
+  //black rectangle
+  fill(50);
+  rect(0,0,1540,170);
+
+  //bottom gold rectangle
+  fill('gold');
+  rect(0,170,1540,500);
+
+  //links rectangle
+  fill(300);
+  rect(0,650,1540,50)
+  
+  //text Children / Toddlers
+  textSize(100);
+  stroke(0)
+  text("Fine Motor Skills", 405, 120);
+  
+  //Connect The Dots Button 
+  dots_button = createButton("Connect The Dots")
+  dots_button.position(380, 220)
+  dots_button.size(800,100)
+  dots_button.style('color:black')
+  dots_button.style('background-color: white')
+  dots_button.style('font-size','36px')
+  
+  dots_button.mousePressed(); // input function for lvl 1 of Connecting the Dots
+  
+  //Sorting Shapes Victims Button 
+  shape_button = createButton("Sorting Shapes")
+  shape_button.position(380, 350)
+  shape_button.size(800,100)
+  shape_button.style('color:black')
+  shape_button.style('background-color: white')
+  shape_button.style('font-size','36px')
+  
+  shape_button.mousePressed(); // input function for lvl 1 of Sorting Shapes
+  
+  //Math Problems Button 
+  math_button = createButton("Math Problems")
+  math_button.position(380, 480)
+  math_button.size(800,100)
+  math_button.style('color:black')
+  math_button.style('background-color: white')
+  math_button.style('font-size','36px')
+  
+  math_button.mousePressed(displaylvl1); // input functon for lvl 1 of MathProblems
+  
+}
+
+// Math Problems code 
+// Math problems display background function
+function mpBackground(){
+    createCanvas(1540, 700);
+  
+   //background
   background(300);
   
   //black rectangle
   fill(50);
-  rect (0,0,600,140);
-  
+  rect (0,0,1540,150);
+
   //white rectangle
   fill(300);
-  rect (0,140,600,180)
+  rect (0,150,1540,510)
   
-  //gold rectangles
-  fill (255, 204, 0)
-  rect(50, 175, 225, 100, 20);
+  //gold rectangle links
+  fill('gold')
+  rect (0,660,1540,40)
   
-  fill (255, 204, 0)
-  rect(325, 175, 225, 100, 20);
+   //text "Math Problems"
+  fill(300)
+  textSize(100);
+  stroke (0)
+  text ("Math Problems", 440, 110);
+  }
+
+// (create or reset equation/feedback for lv1)
+function displaylvl1(){
   
-  //bottom gold rectangle
-  fill(255, 204, 0);
-  rect (0,320,600,240);
+  // remove any previous buttons/elements
+  removeElements();
   
-  //links rectangle
-   fill(300);
-  rect (0,560,600,40)
+  //display background
+ mpBackground();
+  
+  // display lv1 equation
+  fill('black');
+  textSize(50);
+  stroke(0);
+  text("7 - 3 = ?", 720, 400);
+    
+  // display answer boxs 
+  var correctA;
+  var incorrectA;
+  var incorrectA2;
+  
+  correctA = createButton("4");
+  correctA.position(750, 470);
+  correctA.size(90,60);
+  correctA.style('color:black');
+  correctA.style('background-color:gold');
+  
+  incorrectA = createButton("3");
+  incorrectA.position(630, 470);
+  incorrectA.size(90,60);
+  incorrectA.style('color:black');
+  incorrectA.style('background-color:gold');
+  
+  incorrectA2 = createButton("2");
+  incorrectA2.position(870, 470);
+  incorrectA2.size(90,60);
+  incorrectA2.style('color:black');
+  incorrectA2.style('background-color:gold');
+  
+   // display 'Correct!' feedback
+  correctA.mousePressed(displayFBcL1);
+ 
+  //display 'Incorrect!'
+  incorrectA.mousePressed(displayFBincL1);
+  
+  incorrectA2.mousePressed(displayFBincL1);
+  
+  // feedback functions (lv1)
+  // Correct feedback funciton lv1(will continue to lv2)
+function displayFBcL1(){
+  textSize(60);
+  fill('green');
+  stroke(0);
+  text("Correct!",690,300);
+  
+  // create next button (when correct)
+   let nextB = createButton("next");
+  nextB.position(870, 600);
+  nextB.size(90,40);
+  nextB.style('color:black');
+  nextB.style('background-color:gold');
+  
+  nextB.mousePressed(displaylvl2)
+}
+
+// incorrect feedback function lv1 (restarts lv1)
+function displayFBincL1(){
+  textSize(60);
+  fill('red');
+  stroke(0);
+  text("Incorrect!",670,300);
+  
+  //create try again button
+  var tryAgainB = createButton("Try Again")
+  tryAgainB.position(630, 600);
+  tryAgainB.size(90,40);
+  tryAgainB.style('color:black');
+  tryAgainB.style('background-color:gold');
+  
+  tryAgainB.mousePressed(displaylvl1);
+}
+}
+
+// display lv2 function 
+function displaylvl2(){
+  
+  // remove any previous buttons/elements
+  removeElements();
+  
+  // background
+  mpBackground();
+  
+  // display lv2 equation
+  fill('black');
+  textSize(50);
+  stroke(0);
+  text("11 + 13 = ?", 665, 400);
+  
+  // display answer boxs 
+  var correctA;
+  var incorrectA;
+  var incorrectA2;
+  
+  correctA = createButton("24");
+  correctA.position(630, 470);
+  correctA.size(90,60);
+  correctA.style('color:black');
+  correctA.style('background-color:gold');
+  
+  incorrectA = createButton("25");
+  incorrectA.position(750, 470);
+  incorrectA.size(90,60);
+  incorrectA.style('color:black');
+  incorrectA.style('background-color:gold');
+  
+  incorrectA2 = createButton("34");
+  incorrectA2.position(870, 470);
+  incorrectA2.size(90,60);
+  incorrectA2.style('color:black');
+  incorrectA2.style('background-color:gold');
+  
+   // display 'Correct!' feedback
+  correctA.mousePressed(displayFBcL2);
+ 
+  //display 'Incorrect!'
+  incorrectA.mousePressed(displayFBincL2);
+  
+  incorrectA2.mousePressed(displayFBincL2);
+  
+  // feedback functions lv2
+  
+  // Correct feedback funciton lv1(will continue to lv2)
+function displayFBcL2(){
+  textSize(60);
+  fill('green');
+  stroke(0);
+  text("Correct!",690,300);
+  
+  // create next button (when correct)
+   let nextB = createButton("next");
+  nextB.position(870, 600);
+  nextB.size(90,40);
+  nextB.style('color:black');
+  nextB.style('background-color:gold');
+  
+  nextB.mousePressed(displaylvl3)
+}
+
+// incorrect feedback function lv2 (restarts lv2)
+function displayFBincL2(){
+  textSize(60);
+  fill('red');
+  stroke(0);
+  text("Incorrect!",670,300);
+  
+  //create try again button
+  var tryAgainB = createButton("Try Again")
+  tryAgainB.position(630, 600);
+  tryAgainB.size(90,40);
+  tryAgainB.style('color:black');
+  tryAgainB.style('background-color:gold');
+  
+  tryAgainB.mousePressed(displaylvl2);
+  
+}
+}
+
+// display lv3 function
+function displaylvl3(){
+  
+  // remove any previous buttons/elements
+  removeElements();
+  
+  // background
+  mpBackground();
+  
+  // display lv3 equation
+  fill('black');
+  textSize(50);
+  stroke(0);
+  text("8 x 5 = ?", 700, 400);
+  
+  // display answer boxs 
+  var correctA;
+  var incorrectA;
+  var incorrectA2;
+  
+  correctA = createButton("40");
+  correctA.position(750, 470);
+  correctA.size(90,60);
+  correctA.style('color:black');
+  correctA.style('background-color:gold');
+  
+  incorrectA = createButton("45");
+  incorrectA.position(630, 470);
+  incorrectA.size(90,60);
+  incorrectA.style('color:black');
+  incorrectA.style('background-color:gold');
+  
+  incorrectA2 = createButton("13");
+  incorrectA2.position(870, 470);
+  incorrectA2.size(90,60);
+  incorrectA2.style('color:black');
+  incorrectA2.style('background-color:gold');
+  
+  // display 'Correct!' feedback
+  correctA.mousePressed(displayFBcL3);
+ 
+  //display 'Incorrect!'
+  incorrectA.mousePressed(displayFBincL3);
+  
+  incorrectA2.mousePressed(displayFBincL3);
+
+function displayFBcL3(){
+  textSize(60);
+  fill('green');
+  stroke(0);
+  text("Correct!",690,300);
+  
+  // create next button (when correct)
+   let nextB = createButton("next");
+  nextB.position(870, 600);
+  nextB.size(90,40);
+  nextB.style('color:black');
+  nextB.style('background-color:gold');
+  
+  nextB.mousePressed(displaylvl4)
+}
+
+// incorrect feedback function lv3 (restarts lv3)
+function displayFBincL3(){
+  textSize(60);
+  fill('red');
+  stroke(0);
+  text("Incorrect!",670,300);
+  
+  //create try again button
+  var tryAgainB = createButton("Try Again")
+  tryAgainB.position(630, 600);
+  tryAgainB.size(90,40);
+  tryAgainB.style('color:black');
+  tryAgainB.style('background-color:gold');
+  
+  tryAgainB.mousePressed(displaylvl3);
+}
+}
+
+// display lv4 function
+function displaylvl4(){
+  
+  // remove any previous buttons/elements
+  removeElements();
+  
+  // background
+  mpBackground();
+  
+  // display lv4 equation
+  fill('black');
+  textSize(50);
+  stroke(0);
+  text("15 / 5 = ?", 685, 400);
+  
+  // display answer boxs 
+  var correctA;
+  var incorrectA;
+  var incorrectA2;
+  
+  correctA = createButton("3");
+  correctA.position(870, 470);
+  correctA.size(90,60);
+  correctA.style('color:black');
+  correctA.style('background-color:gold');
+  
+  incorrectA = createButton("10");
+  incorrectA.position(630, 470);
+  incorrectA.size(90,60);
+  incorrectA.style('color:black');
+  incorrectA.style('background-color:gold');
+  
+  incorrectA2 = createButton("20");
+  incorrectA2.position(750, 470);
+  incorrectA2.size(90,60);
+  incorrectA2.style('color:black');
+  incorrectA2.style('background-color:gold');
+  
+   // display 'Correct!' feedback
+  correctA.mousePressed(displayFBcL4);
+ 
+  //display 'Incorrect!'
+  incorrectA.mousePressed(displayFBincL4);
+  
+  incorrectA2.mousePressed(displayFBincL4);
+
+  // correct feedback function lv4 (Player wins)
+function displayFBcL4(){
+  textSize(60);
+  fill('green');
+  stroke(0);
+  text("Correct!",690,300);
+  
+  // create next button (when correct)
+   let nextB = createButton("next");
+  nextB.position(870, 600);
+  nextB.size(90,40);
+  nextB.style('color:black');
+  nextB.style('background-color:gold');
+  
+  nextB.mousePressed(displayPW); // display Player Won menu
+}
+
+// incorrect feedback function lv4 (restarts lv4)
+function displayFBincL4(){
+  textSize(60);
+  fill('red');
+  stroke(0);
+  text("Incorrect!",670,300);
+  
+  //create try again button
+  var tryAgainB = createButton("Try Again")
+  tryAgainB.position(630, 600);
+  tryAgainB.size(90,40);
+  tryAgainB.style('color:black');
+  tryAgainB.style('background-color:gold');
+  
+  tryAgainB.mousePressed(displaylvl4);
+}
+}
+
+// game over function (player won)
+function displayPW(){
+  
+  // remove any previous buttons/elements
+  removeElements();
+  
+  // background 
+  mpBackground();
+  
+  // "Well Done!" text
+  textSize(60);
+  fill('green');
+  stroke(0);
+  text("Well Done!",660,350);
+  
+  // play again button
+  var playAgainB = createButton("Play Again")
+  playAgainB.position(750, 550);
+  playAgainB.size(90,40);
+  playAgainB.style('color:black');
+  playAgainB.style('background-color:gold');
+  
+  playAgainB.mousePressed(displaylvl1); // goes back to lvl 1
+  
+  // back to home button
+   let homeB = createButton("Home");
+  homeB.position(750, 600);
+  homeB.size(90,40);
+  homeB.style('color:black');
+  homeB.style('background-color:gold');
+  
+  homeB.mousePressed(homeMenu); // goes back to home menu
+}
+// End of Math Problems code
