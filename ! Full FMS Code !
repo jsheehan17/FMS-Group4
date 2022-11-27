@@ -88,6 +88,15 @@ function mpBackground(){
   textSize(100);
   stroke (0)
   text ("Math Problems", 440, 110);
+  
+  // back to home button
+  homeB = createButton("Home");
+  homeB.position(750, 600);
+  homeB.size(90,40);
+  homeB.style('color:black');
+  homeB.style('background-color:gold');
+  
+  homeB.mousePressed(homeMenu);
   }
 
 // (create or reset equation/feedback for lv1)
@@ -109,6 +118,7 @@ function displaylvl1(){
   var correctA;
   var incorrectA;
   var incorrectA2;
+  var homeB;
   
   correctA = createButton("4");
   correctA.position(750, 470);
@@ -127,6 +137,7 @@ function displaylvl1(){
   incorrectA2.size(90,60);
   incorrectA2.style('color:black');
   incorrectA2.style('background-color:gold');
+  
   
    // display 'Correct!' feedback
   correctA.mousePressed(displayFBcL1);
@@ -191,6 +202,7 @@ function displaylvl2(){
   var correctA;
   var incorrectA;
   var incorrectA2;
+  var homeB;
   
   correctA = createButton("24");
   correctA.position(630, 470);
@@ -275,6 +287,7 @@ function displaylvl3(){
   var correctA;
   var incorrectA;
   var incorrectA2;
+  var homeB;
   
   correctA = createButton("40");
   correctA.position(750, 470);
@@ -351,10 +364,11 @@ function displaylvl4(){
   stroke(0);
   text("15 / 5 = ?", 685, 400);
   
-  // display answer boxs 
+  // display answer boxs/ home button
   var correctA;
   var incorrectA;
   var incorrectA2;
+  var homeB;
   
   correctA = createButton("3");
   correctA.position(870, 470);
@@ -440,20 +454,10 @@ function displayPW(){
   playAgainB.style('background-color:gold');
   
   playAgainB.mousePressed(displaylvl1); // goes back to lvl 1
-  
-  // back to home button
-   let homeB = createButton("Home");
-  homeB.position(750, 600);
-  homeB.size(90,40);
-  homeB.style('color:black');
-  homeB.style('background-color:gold');
-  
-  homeB.mousePressed(homeMenu); // goes back to home menu
 }
 // End of Math Problems code
 
 //Start of Shape Sorting Code
-
 function shapesOne () {
   
   removeElements();
@@ -758,5 +762,8 @@ function incorrectAnswer() {
     retry.mousePressed (shapesFour)
   }
 }
-
 //End of Shape Sorting Code
+
+//Start of Connect The Dots code
+
+//End of Connect The Dots code
