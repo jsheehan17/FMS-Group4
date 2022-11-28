@@ -108,17 +108,21 @@ function displaylvl1(){
   //display background
  mpBackground();
   
+  // small instructions, only for lvl1
+  fill('black');
+  textSize(20);
+  text ("Choose the correct answer to the equations above", 570, 440);
+  
   // display lv1 equation
   fill('black');
   textSize(50);
   stroke(0);
-  text("7 - 3 = ?", 720, 400);
+  text("7 - 3 = ?", 705, 380);
     
   // display answer boxs 
   var correctA;
   var incorrectA;
   var incorrectA2;
-  var homeB;
   
   correctA = createButton("4");
   correctA.position(750, 470);
@@ -783,12 +787,12 @@ function scBackground (){
   fill('gold')
   rect (0,660,1540,40)
   
-   //text Connecting the Dots
+   //text Shades Of Color
   fill(300)
   textSize(100);
   stroke (0)
   text ("Shades Of Color", 440, 110);
-    
+  
   // home button 
   homeB = createButton("Home");
   homeB.position(750, 600);
@@ -805,11 +809,16 @@ function scDisplaylv1(){
   
   scBackground ();
   
+  // small instructions, only for lvl1
+  fill('black');
+  textSize(20);
+  text ("Select the color that stands out!", 655, 350);
+  
   // create rectangle buttons
   var correctR = createButton("");
   correctR.position(750, 400);
   correctR.size(90,140);
-  correctR.style('background-color:gray');
+  correctR.style('background-color:darkgray');
   
   correctR.mousePressed(scDisplayFBcL1);
   
